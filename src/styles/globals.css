@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* #region  /**=========== Primary Color =========== */
+  /* green */
+  --tw-color-primary-50: 240 253 244;
+  --tw-color-primary-100: 220 252 231;
+  --tw-color-primary-200: 187 247 208;
+  --tw-color-primary-300: 134 239 172;
+  --tw-color-primary-400: 74 222 128;
+  --tw-color-primary-500: 0 82 255;
+  --tw-color-primary-600: 22 163 74;
+  --tw-color-primary-700: 21 128 61;
+  --tw-color-primary-800: 22 101 52;
+  --tw-color-primary-900: 20 83 45;
+  --color-primary-50: rgb(var(--tw-color-primary-50)); /* #f0fdf4 */
+  --color-primary-100: rgb(var(--tw-color-primary-100)); /* #dcfce7 */
+  --color-primary-200: rgb(var(--tw-color-primary-200)); /* #bbf7d0 */
+  --color-primary-300: rgb(var(--tw-color-primary-300)); /* #86efac */
+  --color-primary-400: rgb(var(--tw-color-primary-400)); /* #4ade80 */
+  --color-primary-500: rgb(var(--tw-color-primary-500)); /* #17FF16*/
+  --color-primary-600: rgb(var(--tw-color-primary-600)); /* #16a34a */
+  --color-primary-700: rgb(var(--tw-color-primary-700)); /* #15803d */
+  --color-primary-800: rgb(var(--tw-color-primary-800)); /* #166534 */
+  --color-primary-900: rgb(var(--tw-color-primary-900)); /* #14532d */
+
+  /* yellow */
+  --tw-color-secondary-500: 232 65 66;
+  --color-secondary-500: rgb(var(--tw-color-primary-500)); /* #F4F302 */
+  /* #endregion  /**======== Primary Color =========== */
+
+  --safe-area-top: env(safe-area-inset-top);
+  --safe-area-bottom: env(safe-area-inset-bottom, 0);
+  --safe-area-left: env(safe-area-inset-left, 0);
+  --safe-area-right: env(safe-area-inset-right, 0);
+}
+
+@layer base {
+  .cursor-newtab {
+    cursor: url('/images/new-tab.png') 10 10, pointer;
+  }
+
+  /* #region  /**=========== Typography =========== */
+  .h0 {
+    @apply font-primary text-3xl font-bold;
+  }
+
+  h1,
+  .h1 {
+    @apply font-primary text-3xl font-bold;
+  }
+
+  h2,
+  .h2 {
+    @apply font-primary text-xl font-bold;
+  }
+
+  h3,
+  .h3 {
+    @apply font-primary text-lg font-bold;
+  }
+
+  h4,
+  .h4 {
+    @apply font-primary text-base font-bold;
+  }
+
+  body,
+  .p {
+    @apply font-secondary text-white;
+  }
+  /* #endregion  /**======== Typography =========== */
+
+  .layout {
+    /* 1100px */
+    max-width: 68.75rem;
+    @apply mx-auto w-11/12;
+  }
+
+  .text-gradient-primary {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
+  }
+
+  .bg-dark a.custom-link {
+    @apply border-gray-200 hover:border-gray-200/0;
+  }
+
+  /* Class to adjust with sticky footer */
+  .min-h-main {
+    @apply min-h-[calc(100vh-56px)];
+  }
+}
+
+@layer utilities {
+  .animated-underline {
+    background-image: linear-gradient(#33333300, #33333300),
+      linear-gradient(
+        to right,
+        var(--color-primary-400),
+        var(--color-primary-500)
+      );
+    background-size: 100% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .animated-underline {
+      transition: 0.3s ease;
+      transition-property: background-size, color, background-color,
+        border-color;
+    }
+  }
+  .animated-underline:hover,
+  .animated-underline:focus-visible {
+    background-size: 0 2px, 100% 2px;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "css.validate": false,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "headwind.runOnSave": false,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "cSpell.words": ["Lexend", "onflow", "topshot", "unauthenticate"],
+  "conventionalCommits.scopes": ["flow", "game", "quiz"]
+}
