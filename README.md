@@ -17,7 +17,7 @@ Dunk Verse integrates multiple Web3 paradigms into a single platform, allowing u
 
 ### 2. **DeFi**
 - **Prediction Market**: Users bet $FTO tokens to predict outcomes and win rewards.
-- **Lending and Staking**: Future roadmap includes novel mechanisms for liquidity mining and staking.
+- **Lending and Staking**: The future roadmap includes novel liquidity mining and staking mechanisms.
 
 ### 3. **GameFi**
 - **Betting Contracts**: Secure and transparent smart contracts manage user deposits and distribute winnings.
@@ -44,7 +44,7 @@ Dunk Verse integrates multiple Web3 paradigms into a single platform, allowing u
 
 - **Blockchain**: Mantle Layer 2, Ethereum
 - **AI**: DALL-E3, GPT models
-- **Oracles**: Third party oracles api for live Top Shots NBA match data
+- **Oracles**: Third-party oracles API for live Top Shots NBA match data
 - **Smart Contracts**: Solidity
 - **Frontend**: React, TypeScript
 - **Storage**: Pinata
@@ -71,11 +71,11 @@ Dunk Verse integrates multiple Web3 paradigms into a single platform, allowing u
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/AmaanSayyad/dunk-verse.git
+   git clone https://github.com/AmaanSayyad/DunkVerse.git
    ```
 2. Install dependencies:
    ```bash
-   cd dunk-verse
+   cd DunkVerse
    yarn install
    ```
 3. Start the frontend:
