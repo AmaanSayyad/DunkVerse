@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BiBarcodeReader } from 'react-icons/bi';
 import { BsArrowLeft } from 'react-icons/bs';
 import { RiContactsLine } from 'react-icons/ri';
+import { ethers } from 'ethers';
 import Button from '@/components/buttons/Button';
 import NextImage from '@/components/NextImage';
 import QRCodeInvitation from '@/features/Game/components/qr-code-invitation/QRCodeInvitation';
@@ -23,9 +24,7 @@ type Props = {
 const InviteFriends = ({ setOpen }: Props) => {
   const [showQrCodeInvitation, setShowQrCodeInvitation] = useState(false);
   const [friends, setFriends] = useState(initialFriends);
-  const [loadingStates, setLoadingStates] = useState<{
-    [key: string]: boolean;
-  }>({});
+  const [loadingStates, setLoadingStates] = useState<{ [key: string]: boolean }>({});
   const [customAddress, setCustomAddress] = useState('');
   const [amount, setAmount] = useState(0);
   const { makeRefferal } = useQuizContext();
@@ -59,13 +58,20 @@ const InviteFriends = ({ setOpen }: Props) => {
         await inviteFriend(customAddress, amount);
         alert('Invitation sent to custom address');
       }
-    } catch (error) {
-      if (error.code === ethers.errors.UNPREDICTABLE_GAS_LIMIT) {
-        console.error('Transaction may fail or may require manual gas limit:', error);
-        if (error.error && error.error.message.includes('Already invited')) {
+    } catch (error: any) {
+      if (error instanceof Error && 'code' in error) {
+        if (error.code === ethers.errors.UNPREDICTABLE_GAS_LIMIT) {
+          console.error('Transaction may fail or may require manual gas limit:', error);
+          if ((error as any).data?.message.includes('Already invited')) {
+            alert('This address has already been invited.');
+          } else {
+            alert('An error occurred while sending the invitation.');
+          }
+        } else if ((error as any).data && (error as any).data.message.includes('Already invited')) {
           alert('This address has already been invited.');
         } else {
-          alert('An error occurred while sending the invitation.');
+          console.error('An unexpected error occurred:', error);
+          alert(`An unexpected error occurred: ${error.message}`);
         }
       } else {
         console.error('An unexpected error occurred:', error);
