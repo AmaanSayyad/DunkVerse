@@ -53,7 +53,11 @@ const PostQuestions = () => {
       alert('Reward claimed successfully!');
     } catch (error) {
       console.error('Error claiming reward:', error);
-      alert(`Error claiming reward. Please try again. ${error.message}`);
+      if (error instanceof Error) {
+        alert(`Error claiming reward. Please try again. ${error.message}`);
+      } else {
+        alert('Error claiming reward. Please try again.');
+      }
     } finally {
       setLoading(false);
     }
