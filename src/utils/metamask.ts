@@ -189,7 +189,11 @@ export async function acceptInvitation() {
             window.location.href = 'http://localhost:3000/';
         } catch (error) {
             console.error('An error occurred while accepting the invitation:', error);
-            alert(`An error occurred while accepting the invitation: ${error.message}`);
+			if (error instanceof Error) {
+				alert(`An error occurred while accepting the invitation: ${error.message}`);
+			} else {
+				alert('An unknown error occurred while accepting the invitation.');
+			}
         }
     }
 }

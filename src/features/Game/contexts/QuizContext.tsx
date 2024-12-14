@@ -72,13 +72,13 @@ const contractAddresses = {
 const QuizContextProvider = ({ children }: { children: ReactNode }) => {
   const { address } = useAccount();
   const { chains, chain } = useNetwork();
-  const [activeChain, setActiveChainId] = useState(chain?.id);
+  const [activeChain, setActiveChainId] = useState<keyof typeof contractAddresses | undefined>(chain?.id as keyof typeof contractAddresses | undefined);
   const [userTokenBalance, setUserTokenBalance] = useState<string>('0');
   const [userDepositedBalance, setUserDepositedBalance] = useState<string>('0');
   const [poolBalance, setPoolBalance] = useState<string>('0');
 
   useEffect(() => {
-    setActiveChainId(chain?.id);
+    setActiveChainId(chain?.id as keyof typeof contractAddresses);
   }, [chain?.id]);
 
   const signer = useEthersSigner({ chainId: activeChain });
@@ -88,7 +88,7 @@ const QuizContextProvider = ({ children }: { children: ReactNode }) => {
     if (address) {
       const fetchBalance = async () => {
         try {
-          const contractAddress = contractAddresses[activeChain];
+          const contractAddress = activeChain ? contractAddresses[activeChain] : undefined;
           if (!contractAddress) {
             throw new Error('Unsupported chain');
           }
@@ -126,7 +126,10 @@ const QuizContextProvider = ({ children }: { children: ReactNode }) => {
 
   const makeRefferal = async () => {
     try {
-      const contractAddress = contractAddresses[activeChain];
+      const contractAddress = activeChain ? contractAddresses[activeChain] : undefined;
+      if (!contractAddress) {
+        throw new Error('Unsupported chain');
+      }
       if (!contractAddress) {
         throw new Error('Unsupported chain');
       }
@@ -150,7 +153,7 @@ const QuizContextProvider = ({ children }: { children: ReactNode }) => {
     poolId,
   }: DepositFundsParams): Promise<ethers.ContractTransaction | undefined> => {
     try {
-      const contractAddress = contractAddresses[activeChain];
+      const contractAddress = activeChain ? contractAddresses[activeChain] : undefined;
       if (!contractAddress) {
         throw new Error('Unsupported chain');
       }
@@ -195,7 +198,7 @@ const QuizContextProvider = ({ children }: { children: ReactNode }) => {
     poolId,
   }: WithdrawFundsParams): Promise<ethers.ContractTransaction | undefined> => {
     try {
-      const contractAddress = contractAddresses[activeChain];
+      const contractAddress = activeChain ? contractAddresses[activeChain] : undefined;
       if (!contractAddress) {
         throw new Error('Unsupported chain');
       }
