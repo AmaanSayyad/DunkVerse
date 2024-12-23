@@ -27,6 +27,11 @@ const config = {
       chainId: 43113, // Chain ID for Avalanche Testnet
       accounts: [PRIVATE_KEY],
     },
+    opbnbTestnet: {
+      url: 'https://opbnb-testnet-rpc.bnbchain.org', // OPBNB Testnet RPC
+      chainId: 5611, // Chain ID for OPBNB Testnet
+      accounts: [PRIVATE_KEY],
+    },
     unichainSepolia: {
       url: 'https://sepolia.unichain.org', // Unichain Sepolia Testnet RPC
       chainId: 1301, // Chain ID for Unichain Sepolia
