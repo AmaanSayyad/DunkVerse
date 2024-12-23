@@ -127,7 +127,7 @@ const Profile = () => {
                 }`}
                 disabled={loading}
               >
-                {loading ? 'Uploading...' : 'Upload to DunkVerse'}
+                {loading ? 'Uploading...' : 'Mint NFT'}
               </button>
             </div>
           </div>
