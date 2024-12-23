@@ -22,6 +22,11 @@ const config = {
       chainId: 5003, // Chain ID for Mantle Sepolia
       accounts: [PRIVATE_KEY],
     },
+    avalancheTestnet: {
+      url: 'https://api.avax-test.network/ext/bc/C/rpc', // Avalanche Testnet RPC
+      chainId: 43113, // Chain ID for Avalanche Testnet
+      accounts: [PRIVATE_KEY],
+    },
     unichainSepolia: {
       url: 'https://sepolia.unichain.org', // Unichain Sepolia Testnet RPC
       chainId: 1301, // Chain ID for Unichain Sepolia

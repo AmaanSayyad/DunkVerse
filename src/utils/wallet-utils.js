@@ -1,11 +1,11 @@
 import { getDefaultWallets } from '@rainbow-me/rainbowkit';
 import { configureChains, createConfig } from 'wagmi';
-import { mantleSepoliaTestnet, baseSepolia, polygon, unichainSepolia } from 'wagmi/chains';
+import { mantleSepoliaTestnet, avalancheFuji, baseSepolia, polygon, unichainSepolia } from 'wagmi/chains';
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 
 // Configure chains and providers
 const { chains, publicClient } = configureChains(
-  [mantleSepoliaTestnet, polygon, baseSepolia, unichainSepolia],
+  [mantleSepoliaTestnet, avalancheFuji , polygon, baseSepolia, unichainSepolia],
   [
     jsonRpcProvider({
       rpc: (chain) => {
@@ -13,6 +13,11 @@ const { chains, publicClient } = configureChains(
           // Mantle Sepolia Testnet
           return {
             http: 'https://rpc.sepolia.mantle.xyz',
+          };
+        } else if (chain.id === avalancheFuji.id) {
+          // Avalanche Fuji Testnet
+          return {
+            http: 'https://api.avax-test.network/ext/bc/C/rpc',
           };
         } else if (chain.id === polygon.id) {
           // Polygon Mainnet
