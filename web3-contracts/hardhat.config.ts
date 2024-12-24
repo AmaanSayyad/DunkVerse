@@ -7,8 +7,7 @@ const {
   POLYGONSCAN_API_KEY,
   MANTLESCAN_API_KEY,
   SNOWTRACE_API_KEY,
-  NEO_API_KEY,
-  NEOMAIN_API_KEY,
+  
   OPBNBSCAN_API_KEY,
   UNISCAN_API_KEY,
   BASESCAN_API_KEY
@@ -37,16 +36,7 @@ const config = {
       chainId: 43113, // Chain ID for Avalanche Testnet
       accounts: [PRIVATE_KEY],
     },
-    neoTestnet: {
-      url: 'https://neoxt4seed1.ngd.network', // NEO Testnet RPC
-      chainId: 12227332, // Chain ID for NEO Testnet
-      accounts: [PRIVATE_KEY],
-    },
-    neoMainnet: {
-      url: 'https://mainnet-1.rpc.banelabs.org', // NEO Mainnet RPC
-      chainId: 47763, // Chain ID for NEO Mainnet
-      accounts: [PRIVATE_KEY],
-    },
+    
     opbnbTestnet: {
       url: 'https://opbnb-testnet-rpc.bnbchain.org', // OPBNB Testnet RPC
       chainId: 5611, // Chain ID for OPBNB Testnet
@@ -79,8 +69,7 @@ const config = {
       polygon: POLYGONSCAN_API_KEY,
       mantleSepoliaTestnet: MANTLESCAN_API_KEY,
       avalancheTestnet: SNOWTRACE_API_KEY,
-      neoTestnet: NEO_API_KEY,
-      neoMainnet: NEOMAIN_API_KEY,
+     
       opbnbTestnet: OPBNBSCAN_API_KEY,
       unichainSepolia: UNISCAN_API_KEY,
       baseSepolia: BASESCAN_API_KEY
@@ -94,22 +83,7 @@ const config = {
           browserURL: 'https://sepolia.mantlescan.xyz'
         }
       },
-      {
-        network: 'neoTestnet',
-        chainId: 12227332,
-        urls: {
-          apiURL: 'https://t4.neotube.io/api',
-          browserURL: 'https://xt4scan.ngd.network'
-        }
-      },
-      {
-        network: 'neoMainnet',
-        chainId: 47763,
-        urls: {
-          apiURL: 'https://mainnet-1.rpc.banelabs.org',
-          browserURL: 'https://xexplorer.neo.org'
-        }
-      },
+      
       {
         network: 'opbnbTestnet',
         chainId: 5611,

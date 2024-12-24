@@ -65,8 +65,6 @@ export const useQuizContext = () => {
 const contractAddresses = {
   5003: { token: '0xaF1968db67Dd7161D2AF04917b03240DE638ec15', main: '0xaD488Cd332034434240828F987d6E6B991D48125' }, // Mantle Sepolia Testnet
   43113: { token: '0xC24A824A3e1636247deA0E427b849d8Fa05dB022', main: '0x9434F069F57CD2084e3864C4DB5598835b6F6F18' }, // Avalanche Testnet
-  12227332: { token: '0x98162Dc124EdB1873A03E77a2Da016a8d433FDe1', main: '0x67ff60619A65090d35523dA1D88309D2f9702aFd' }, // NEO Testnet
-  47763: { token: '0x5BbDd2cA3d3a1bB5b6f9FbE0f2f3f8bBd6e2FbA4', main: '0x5BbDd2cA3d3a1bB5b6f9FbE0f2f3f8bBd6e2FbA4' }, // NEO Mainnet
   5611: { token: '0x8ee64A53C83C52c4eCDDB4cE946ED37928D9Ab61', main: '0x6a07aEBE95e24b3c16862741dbCe13B14546860D' }, // OPBNB Testnet
   137: { token: '0xPolygonTokenAddress', main: '0xPolygonBettingPoolAddress' }, // Polygon Mainnet
   80001: { token: '0xBaseSepoliaTokenAddress', main: '0xBaseSepoliaBettingPoolAddress' }, // Base Sepolia

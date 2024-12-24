@@ -29,56 +29,6 @@ const mantleSepoliaTestnet = {
   }
 };
 
-const neoTestnet = {
-  id: 12227332,
-  name: 'Neo X Testnet T4',
-  network: 'neoTestnet',
-  nativeCurrency: {
-    decimals: 18,
-    name: 'GAS',
-    symbol: 'GAS',
-  },
-  rpcUrls: {
-    public: { http: ['https://neoxt4seed1.ngd.network'] },
-    default: { http: ['https://neoxt4seed1.ngd.network'] },
-  },
-  iconUrl: 'https://assets.coingecko.com/coins/images/858/large/GAS_512_512.png?1696501992',
-  icon: {
-    url: 'https://assets.coingecko.com/coins/images/858/large/GAS_512_512.png?1696501992',
-    width: 512,
-    height: 512,
-    format: 'png'
-  },
-  blockExplorers: {
-    default: { url: 'https://xt4scan.ngd.network' }
-  }
-};
-
-const neoMainnet = {
-  id: 47763,
-  name: 'Neo X Mainnet',
-  network: 'neoMainnet',
-  nativeCurrency: {
-    decimals: 18,
-    name: 'GAS',
-    symbol: 'GAS',
-  },
-  rpcUrls: {
-    public: { http: ['https://mainnet-1.rpc.banelabs.org'] },
-    default: { http: ['https://mainnet-1.rpc.banelabs.org'] },
-  },
-  iconUrl: 'https://cryptologos.cc/logos/neo-neo-logo.png',
-  icon: {
-    url: 'https://cryptologos.cc/logos/neo-neo-logo.png',
-    width: 512,
-    height: 512,
-    format: 'png'
-  },
-  blockExplorers: {
-    default: { url: 'https://xexplorer.neo.org' }
-  }
-};
-
 const opBNBTestnet = {
   id: 5611,
   name: 'opBNB Testnet',
@@ -131,7 +81,7 @@ const unichainSepolia = {
 
 // Configure chains and providers
 const { chains, publicClient, webSocketPublicClient } = configureChains(
-  [mantleSepoliaTestnet, avalancheFuji , neoTestnet, neoMainnet, opBNBTestnet, polygon, baseSepolia, unichainSepolia],
+  [mantleSepoliaTestnet, avalancheFuji , opBNBTestnet, polygon, baseSepolia, unichainSepolia],
   [
     jsonRpcProvider({
       rpc: (chain) => {
@@ -140,10 +90,7 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
             return { http: 'https://rpc.sepolia.mantle.xyz' };
           case avalancheFuji.id:
             return { http: 'https://api.avax-test.network/ext/bc/C/rpc' };
-          case neoTestnet.id:
-            return { http: 'https://neoxt4seed1.ngd.network' };
-          case neoMainnet.id:
-            return { http: 'https://mainnet-1.rpc.banelabs.org' };
+          
           case opBNBTestnet.id:
             return { http: 'https://opbnb-testnet-rpc.bnbchain.org' };
           case polygon.id:
