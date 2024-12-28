@@ -81,7 +81,7 @@
 ## How It Works
 
 1. **User Onboarding**:
-   - Sign up via MetaMask.
+   - Connect Wallet via MetaMask.
    - Receive $FTO tokens if you have a metamask-to-metamask invitation.
 
 2. **Participation**:
@@ -116,10 +116,13 @@
 ---
 
 ## **Future Enhancements**
-- Direct fiat-to-$FTO transactions through Apple Pay and bank cards.
+- Enable more complex betting logic, build 16 new features and launch v2 in the telegram mini-app.
+- Integrate $FTO token with Apple Pay & card payments via Stripe/ 3rd party services.
+- Bring partnerships with NBA teams, NBA TopShots, Chiliz and 20+ New Protocol Integration.
+- Scale to global sports events beyond NBA.
 - Expanding the AI-generated quiz system to cover multiple sports and leagues.
 - Enhanced UI/UX for seamless user onboarding.
 
 ## Connect. Play. Win.
 
-DunkVerse on Base and Unichain Blockchain combines the love for sports and blockchain innovation, creating a vibrant ecosystem for fans and collectors. Join us today and experience the future of fan engagement!
+DunkVerse on Mantle Blockchain combines the love for sports and blockchain innovation, creating a vibrant ecosystem for fans and collectors. Join us today and experience the future of fan engagement!
