@@ -25,28 +25,6 @@
 - Real-time leaderboard displays top-performing players in live quizzes.
 - View the average market value of NFTs on the platform.
 
-## Features
-
-### 1. **AI-Generated Content (AIGC)**
-- **Quiz Creation**: Generates engaging quizzes using advanced AI models like GPT and DALL-E3.
-- **NFT Generation**: AI-powered creation of unique NBA-themed NFTs (TopShots) as rewards.
-
-### 2. **DeFi**
-- **Prediction Market**: Users bet $FTO tokens to predict outcomes and win rewards.
-- **Lending and Staking**: The future roadmap includes novel liquidity mining and staking mechanisms.
-
-### 3. **GameFi**
-- **Betting Contracts**: Secure and transparent smart contracts manage user deposits and distribute winnings.
-- **Gamification**: Leaderboards track and display top-performing players.
-
-### 4. **NFTs**
-- **Dynamic NFT Rewards**: Win AI-generated TopShots NFTs by participating in quizzes and predictions.
-- **Marketplace Integration**: Trade NFTs within the Dunk Verse ecosystem (future feature).
-
-### 5. **SocialFi**
-- **On-Chain Invitations**: Users can invite friends via MetaMask and track invitation rewards.
-- **Community Engagement**: Leaderboards and social features promote competition and interaction.
-
 ## Deployed Contracts
 
 | Contract Name        | Description                                   | Mantle Testnet Deployed Contract Links                                            |
@@ -75,8 +53,6 @@
   - Place bids in NFT auctions.
   - Participate in quizzes.
   - Peer-to-peer transactions for social and gaming features.
-
----
 
 ## How It Works
 
@@ -112,8 +88,6 @@
    yarn run dev
    ```
 4. Access the application at `http://localhost:3000`.
-
----
 
 ## **Future Enhancements**
 - Enable more complex betting logic, build 16 new features and launch v2 in the telegram mini-app.
