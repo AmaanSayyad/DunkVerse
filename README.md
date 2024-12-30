@@ -25,9 +25,9 @@
 - Real-time leaderboard displays top-performing players in live quizzes.
 - View the average market value of NFTs on the platform.
 
-## Deployed Contracts
+## Deployed and Verified Contracts
 
-| Contract Name        | Description                                   | Mantle Testnet Deployed Contract Links                                            |
+| Contract Name        | Description                                   | Mantle Testnet Deployed and Verified Contract Links                               |
 |----------------------|-----------------------------------------------|-----------------------------------------------------------------------------------|
 | `DunkVerse.sol`      | ERC-20 token contract for $FTO.               | https://sepolia.mantlescan.xyz/address/0xaF1968db67Dd7161D2AF04917b03240DE638ec15 |
 | `BettingPool.sol`    | Handles GameFi betting logic.                 | https://sepolia.mantlescan.xyz/address/0xaD488Cd332034434240828F987d6E6B991D48125 |
