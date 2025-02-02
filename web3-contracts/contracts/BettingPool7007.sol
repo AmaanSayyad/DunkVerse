@@ -188,3 +188,4 @@ contract BettingPool7007 is ERC721Enumerable, Ownable, IERC7007 {
 
     emit Mint(tokenId, prompt, aigcData, uri, proof);
 }
+}
